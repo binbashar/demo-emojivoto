@@ -61,8 +61,8 @@ patches:
       value: preview.web.demo.devstg.aws.celes.ai
 images:
 - name: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-emoji-svc
-  newTag: 101-c905b3d
+  newTag: 102-f2b9a36
 - name: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-voting-svc
-  newTag: 101-c905b3d
+  newTag: 102-f2b9a36
 - name: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-web
-  newTag: 101-c905b3d
+  newTag: 102-f2b9a36
