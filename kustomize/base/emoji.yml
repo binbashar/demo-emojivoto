@@ -70,7 +70,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    cert-manager.io/cluster-issuer: clusterissuer-binbash-cert-manager-clusterissuer
+    cert-manager.io/cluster-issuer: clusterissuer-celes-cert-manager-clusterissuer
     kubernetes.io/ingress.class: private-apps
     kubernetes.io/tls-acme: "true"
   labels:
