@@ -94,7 +94,7 @@ jobs:
         role-to-assume: arn:aws:iam::${{ secrets.AWS_SHARED_ACCOUNT_ID }}:role/shared-github-actions-oidc
         aws-region: ${{ env.REGION }}
 
-    - name: Login to Amazon ECR
+    - name: Login to AWS ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v2.0.1
 
