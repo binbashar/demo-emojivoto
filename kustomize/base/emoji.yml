@@ -25,7 +25,7 @@ spec:
       serviceAccountName: emoji
       containers:
       - name: emoji-svc
-        image: 763606934258.dkr.ecr.us-east-1.amazonaws.com/emojivoto-emoji-svc:tag
+        image: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-emoji-svc:tag
         env:
         - name: GRPC_PORT
           value: "8080"
@@ -79,7 +79,7 @@ metadata:
   name: emoji-svc-ingress
 spec:
   rules:
-  - host: emoji.aws.binbash.com.ar
+  - host: emoji.aws.celes.ai
     http:
       paths:
       - path: /
@@ -89,7 +89,7 @@ spec:
             name: emoji-svc
             port:
               number: 8080
-  - host: preview.emoji.aws.binbash.com.ar
+  - host: preview.emoji.aws.celes.ai
     http:
       paths:
       - path: /
@@ -101,6 +101,6 @@ spec:
               number: 8080
   tls:
   - hosts:
-    - emoji.aws.binbash.com.ar
-    - preview.emoji.aws.binbash.com.ar
+    - emoji.aws.celes.ai
+    - preview.emoji.aws.celes.ai
     secretName: emoji-svc-private-tls

@@ -25,7 +25,7 @@ spec:
       serviceAccountName: voting
       containers:
       - name: voting-svc
-        image: 763606934258.dkr.ecr.us-east-1.amazonaws.com/emojivoto-voting-svc:tag
+        image: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-voting-svc:tag
         env:
         - name: GRPC_PORT
           value: "8080"
@@ -79,7 +79,7 @@ metadata:
   name: voting-svc-ingress
 spec:
   rules:
-  - host: voting.demo.devstg.aws.binbash.com.ar
+  - host: voting.demo.devstg.aws.celes.ai
     http:
       paths:
       - path: /
@@ -89,7 +89,7 @@ spec:
             name: voting-svc
             port:
               number: 8080
-  - host: preview.voting.demo.devstg.aws.binbash.com.ar
+  - host: preview.voting.demo.devstg.aws.celes.ai
     http:
       paths:
       - path: /
@@ -101,6 +101,6 @@ spec:
               number: 8080
   tls:
   - hosts:
-    - voting.demo.devstg.aws.binbash.com.ar
-    - preview.voting.demo.devstg.aws.binbash.com.ar
+    - voting.demo.devstg.aws.celes.ai
+    - preview.voting.demo.devstg.aws.celes.ai
     secretName: voting-svc-private-tls

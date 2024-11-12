@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: vote-bot
-        image: 763606934258.dkr.ecr.us-east-1.amazonaws.com/emojivoto-web:tag
+        image: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-web:tag
         command:
         - emojivoto-vote-bot
         env:

@@ -25,7 +25,7 @@ spec:
       serviceAccountName: web
       containers:
       - name: web-svc
-        image: 763606934258.dkr.ecr.us-east-1.amazonaws.com/emojivoto-web:tag
+        image: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-web:tag
         env:
         - name: WEB_PORT
           value: "8080"
@@ -77,7 +77,7 @@ metadata:
   name: web-svc-ingress
 spec:
   rules:
-  - host: web.aws.binbash.com.ar
+  - host: web.aws.celes.ai
     http:
       paths:
       - path: /
@@ -87,7 +87,7 @@ spec:
             name: web-svc
             port:
               number: 8080
-  - host: preview.web.aws.binbash.com.ar
+  - host: preview.web.aws.celes.ai
     http:
       paths:
       - path: /
@@ -99,6 +99,6 @@ spec:
               number: 8080
   tls:
   - hosts:
-    - web.aws.binbash.com.ar
-    - preview.web.aws.binbash.com.ar
+    - web.aws.celes.ai
+    - preview.aws.celes.ai
     secretName: web-svc-private-tls
