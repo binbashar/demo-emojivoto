@@ -71,7 +71,7 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: clusterissuer-celes-cert-manager-clusterissuer
-    kubernetes.io/ingress.class: public-apps
+    kubernetes.io/ingress.class: private-apps
     kubernetes.io/tls-acme: "true"
   labels:
     app.kubernetes.io/name: emoji
