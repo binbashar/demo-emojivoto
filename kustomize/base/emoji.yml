@@ -71,7 +71,7 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: clusterissuer-celes-cert-manager-clusterissuer
-    kubernetes.io/ingress.class: private-apps
+    kubernetes.io/ingress.class: public-apps
     kubernetes.io/tls-acme: "true"
   labels:
     app.kubernetes.io/name: emoji
@@ -79,7 +79,7 @@ metadata:
   name: emoji-svc-ingress
 spec:
   rules:
-  - host: emoji.internal.aws.celes.ai
+  - host: emoji.aws.celes.ai
     http:
       paths:
       - path: /
@@ -89,7 +89,7 @@ spec:
             name: emoji-svc
             port:
               number: 8080
-  - host: preview.emoji.internal.aws.celes.ai
+  - host: preview.emoji.aws.celes.ai
     http:
       paths:
       - path: /
@@ -101,6 +101,6 @@ spec:
               number: 8080
   tls:
   - hosts:
-    - emoji.internal.aws.celes.ai
-    - preview.emoji.internal.aws.celes.ai
+    - emoji.aws.celes.ai
+    - preview.emoji.aws.celes.ai
     secretName: emoji-svc-private-tls

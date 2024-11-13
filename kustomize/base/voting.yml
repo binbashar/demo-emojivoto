@@ -71,7 +71,7 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: clusterissuer-celes-cert-manager-clusterissuer
-    kubernetes.io/ingress.class: private-apps
+    kubernetes.io/ingress.class: public-apps
     kubernetes.io/tls-acme: "true"
   labels:
     app.kubernetes.io/name: voting-svc
@@ -79,7 +79,7 @@ metadata:
   name: voting-svc-ingress
 spec:
   rules:
-  - host: voting.demo.devstg.internal.aws.celes.ai
+  - host: voting.demo.devstg.aws.celes.ai
     http:
       paths:
       - path: /
@@ -89,7 +89,7 @@ spec:
             name: voting-svc
             port:
               number: 8080
-  - host: preview.voting.demo.devstg.internal.aws.celes.ai
+  - host: preview.voting.demo.devstg.aws.celes.ai
     http:
       paths:
       - path: /
@@ -101,6 +101,6 @@ spec:
               number: 8080
   tls:
   - hosts:
-    - voting.demo.devstg.internal.aws.celes.ai
-    - preview.voting.demo.devstg.internal.aws.celes.ai
+    - voting.demo.devstg.aws.celes.ai
+    - preview.voting.demo.devstg.aws.celes.ai
     secretName: voting-svc-private-tls
