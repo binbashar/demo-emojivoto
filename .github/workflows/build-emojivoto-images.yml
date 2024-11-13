@@ -8,6 +8,7 @@ on:
       - '.github/**'
       - 'LICENSE'
       - 'README.md'
+      - 'kustomize/**'
   workflow_dispatch:
 
 permissions:
