@@ -103,4 +103,4 @@ spec:
   - hosts:
     - emoji.aws.celes.ai
     - preview.emoji.aws.celes.ai
-    secretName: emoji-svc-private-tls
+    secretName: emoji-svc-tls

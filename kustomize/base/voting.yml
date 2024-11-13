@@ -103,4 +103,4 @@ spec:
   - hosts:
     - voting.demo.devstg.aws.celes.ai
     - preview.voting.demo.devstg.aws.celes.ai
-    secretName: voting-svc-private-tls
+    secretName: voting-svc-tls

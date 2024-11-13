@@ -101,4 +101,4 @@ spec:
   - hosts:
     - web.aws.celes.ai
     - preview.aws.celes.ai
-    secretName: web-svc-private-tls
+    secretName: web-svc-tls
