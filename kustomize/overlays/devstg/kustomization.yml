@@ -33,32 +33,32 @@ patches:
   patch: |-
     - op: replace
       path: /spec/rules/0/host
-      value: voting.demo.devstg.aws.celes.ai
+      value: voting.demo.devstg.internal.aws.celes.ai
     - op: replace
       path: /spec/tls/0/hosts/0
-      value: voting.demo.devstg.aws.celes.ai
+      value: voting.demo.devstg.internal.aws.celes.ai
     - op: replace
       path: /spec/rules/1/host
-      value: preview.voting.demo.devstg.aws.celes.ai
+      value: preview.voting.demo.devstg.internal.aws.celes.ai
     - op: replace
       path: /spec/tls/0/hosts/1
-      value: preview.voting.demo.devstg.aws.celes.ai
+      value: preview.voting.demo.devstg.internal.aws.celes.ai
 - target:
     kind: Ingress
     name: web-svc-ingress
   patch: |-
     - op: replace
       path: /spec/rules/0/host
-      value: web.demo.devstg.aws.celes.ai
+      value: web.demo.devstg.internal.aws.celes.ai
     - op: replace
       path: /spec/tls/0/hosts/0
-      value: web.demo.devstg.aws.celes.ai
+      value: web.demo.devstg.internal.aws.celes.ai
     - op: replace
       path: /spec/rules/1/host
-      value: preview.web.demo.devstg.aws.celes.ai
+      value: preview.web.demo.devstg.internal.aws.celes.ai
     - op: replace
       path: /spec/tls/0/hosts/1
-      value: preview.web.demo.devstg.aws.celes.ai
+      value: preview.web.demo.devstg.internal.aws.celes.ai
 images:
 - name: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-emoji-svc
   newTag: 244-b55e89d
