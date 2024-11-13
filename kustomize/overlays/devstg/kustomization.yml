@@ -17,16 +17,16 @@ patches:
   patch: |-
     - op: replace
       path: /spec/rules/0/host
-      value: emoji.demo.devstg.aws.celes.ai
+      value: emoji.demo.devstg.internal.aws.celes.ai
     - op: replace
       path: /spec/tls/0/hosts/0
-      value: emoji.demo.devstg.aws.celes.ai
+      value: emoji.demo.devstg.internal.aws.celes.ai
     - op: replace
       path: /spec/rules/1/host
-      value: preview.emoji.demo.devstg.aws.celes.ai
+      value: preview.emoji.demo.devstg.internal.aws.celes.ai
     - op: replace
       path: /spec/tls/0/hosts/1
-      value: preview.emoji.demo.devstg.aws.celes.ai
+      value: preview.emoji.demo.devstg.internal.aws.celes.ai
 - target:
     kind: Ingress
     name: voting-svc-ingress
