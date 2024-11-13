@@ -69,7 +69,7 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: clusterissuer-celes-cert-manager-clusterissuer
-    kubernetes.io/ingress.class: private-apps
+    kubernetes.io/ingress.class: public-apps
     kubernetes.io/tls-acme: "true"
   labels:
     app.kubernetes.io/name: web
@@ -77,7 +77,7 @@ metadata:
   name: web-svc-ingress
 spec:
   rules:
-  - host: web.internal.aws.celes.ai
+  - host: web.aws.celes.ai
     http:
       paths:
       - path: /
@@ -87,7 +87,7 @@ spec:
             name: web-svc
             port:
               number: 8080
-  - host: preview.internal.aws.celes.ai
+  - host: preview.aws.celes.ai
     http:
       paths:
       - path: /
@@ -99,6 +99,6 @@ spec:
               number: 8080
   tls:
   - hosts:
-    - web.internal.aws.celes.ai
-    - preview.internal.aws.celes.ai
+    - web.aws.celes.ai
+    - preview.aws.celes.ai
     secretName: web-svc-private-tls
