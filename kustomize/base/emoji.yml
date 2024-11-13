@@ -79,7 +79,7 @@ metadata:
   name: emoji-svc-ingress
 spec:
   rules:
-  - host: emoji.aws.celes.ai
+  - host: emoji.internal.aws.celes.ai
     http:
       paths:
       - path: /
@@ -89,7 +89,7 @@ spec:
             name: emoji-svc
             port:
               number: 8080
-  - host: preview.emoji.aws.celes.ai
+  - host: preview.emoji.internal.aws.celes.ai
     http:
       paths:
       - path: /
@@ -101,6 +101,6 @@ spec:
               number: 8080
   tls:
   - hosts:
-    - emoji.aws.celes.ai
-    - preview.emoji.aws.celes.ai
+    - emoji.internal.aws.celes.ai
+    - preview.emoji.internal.aws.celes.ai
     secretName: emoji-svc-private-tls
