@@ -65,4 +65,4 @@ images:
 - name: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-voting-svc
   newTag: 186-8ff77b2
 - name: 061051241429.dkr.ecr.us-east-1.amazonaws.com/emojivoto-web
-  newTag: 185-54f005d
+  newTag: 186-8ff77b2
