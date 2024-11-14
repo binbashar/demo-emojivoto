@@ -21,7 +21,7 @@ spec:
         - name: WEB_HOST
           value: web-svc.emojivoto:80
         - name: TTL
-          value: 3600         
+          value: "3600"        
         resources:
           requests:
             cpu: 10m
