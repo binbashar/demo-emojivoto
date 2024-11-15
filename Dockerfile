@@ -8,4 +8,4 @@ COPY $svc_name/target/ /usr/local/bin/
 ENV SVC_NAME $svc_name
 ENTRYPOINT cd /usr/local/bin && $SVC_NAME
 
-ENV ENV="TEST"
+ENV ENV="PROD"
